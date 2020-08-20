@@ -1,40 +1,38 @@
 import { ESC } from "./constants.ts";
 
 /**
- * Erases part of the line.
- * 
- * - If `n` is `0` (or missing), clear from cursor to the end of the line.
- * - If `n` is `1`, clear from cursor to beginning of the line.
- * - If `n` is `2`, clear entire line.
- * 
- * Cursor position does not change.
- * 
- * @param n
+ * Erase from the current cursor position up the specified amount of rows.
  */
 export function eraseLines(): string {
   return ESC + "K";
 }
 
+/** Erase from the current cursor position to the end of the current line. */
 export function eraseEndLine(): string {
   return ESC + "K";
 }
 
+/** Erase from the current cursor position to the start of the current line. */
 export function eraseStartLine(): string {
   return ESC + "1K";
 }
 
+/** Erase the entire current line. */
 export function eraseLine(): string {
   return ESC + "2K";
 }
 
+/** Erase the screen from the current line down to the bottom of the screen. */
 export function eraseDown(): string {
   return ESC + "J";
 }
 
+/** Erase the screen from the current line up to the top of the screen. */
 export function eraseUp() {
   return ESC + "1J";
 }
 
+/** Erase the screen and move the cursor the top left position. */
 export function eraseScreen(): string {
   return ESC + "2J";
 }

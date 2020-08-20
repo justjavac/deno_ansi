@@ -1,5 +1,10 @@
 import { BEL, SEP, OSC } from "./constants.ts";
 
+/**
+ * Create a clickable link.
+ * @param text 
+ * @param url 
+ */
 export function link(text: string, url: string): string {
   return [
     OSC,

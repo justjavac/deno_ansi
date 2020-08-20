@@ -11,6 +11,11 @@ export function cursorTo(x: number, y: number): string {
   return ESC + (y + 1) + ";" + (x + 1) + "H";
 }
 
+/**
+ * Set the position of the cursor relative to its current position.
+ * @param x 
+ * @param y 
+ */
 export function cursorMove(x: number, y: number): string {
   let ret = "";
 
@@ -27,11 +32,12 @@ export function cursorMove(x: number, y: number): string {
   }
 
   return ret;
-} /**
+}
+
+/**
  * moves cursor up # lines (default `1`).
  * @param count
  */
-
 export function cursorUp(count = 1): string {
   return ESC + count + "A";
 }
