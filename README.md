@@ -9,6 +9,8 @@ ANSI escape codes for manipulating the terminal.
 
 > _base on [sindresorhus/ansi-escapes](https://github.com/sindresorhus/ansi-escapes)_
 
+[Document](https://doc.deno.land/https/deno.land/x/ansi/mod.ts)
+
 ## Usage
 
 ```ts
