@@ -1,6 +1,7 @@
 # deno_ansi
 
-[ANSI escape codes](http://www.termsys.demon.co.uk/vtansi.htm) for manipulating the terminal.
+[ANSI escape codes](http://www.termsys.demon.co.uk/vtansi.htm) for manipulating
+the terminal.
 
 > _base on
 > [sindresorhus/ansi-escapes](https://github.com/sindresorhus/ansi-escapes)_
