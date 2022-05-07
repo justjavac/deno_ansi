@@ -1,10 +1,21 @@
 import { ESC } from "./constants.ts";
+import { cursorHorizontal, cursorUp } from "./cursor.ts";
 
 /**
  * Erase from the current cursor position up the specified amount of rows.
  */
-export function eraseLines(): string {
-  return ESC + "K";
+export function eraseLines(count: number): string {
+  let clear = "";
+
+  for (let i = 0; i < count; i++) {
+    clear += eraseLine() + (i < count - 1 ? cursorUp() : "");
+  }
+
+  if (count) {
+    clear += cursorHorizontal();
+  }
+
+  return clear;
 }
 
 /** Erase from the current cursor position to the end of the current line. */
